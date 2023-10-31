@@ -1,27 +1,11 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -35,4 +19,235 @@
   to {
     transform: rotate(360deg);
   }
+}.App {
+  text-align: center;
 }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+/*sidenav*/
+.Sidenav{
+  height: 100vh;
+  width: 280px;
+  color:black;
+  border-radius: 10px;
+  list-style-type:none;
+  position: fixed;
+  margin:0;
+  padding:0;
+  overflow:auto; 
+  justify-content: start;
+  border-right: green;
+  /* box-shadow: 2px 0px 2px 0px #888888 */
+}
+.navbar{
+  display: block;
+  width: 280px;
+  align-items: start;
+}
+
+
+.navbar-nav{
+  display: block;
+  text-align: start;
+  align-items: start;
+}
+.navbar-nav a:hover{
+  width: 100%;
+  background-color: rgb(26, 26, 250);
+  border-radius: 10px;
+
+}
+.nav-item{
+  display: block;
+  color: black;
+  width: 280px;
+  padding: 10px;
+  text-decoration: none;
+  justify-items: left;
+  
+}
+.nav-link.active {
+  background-color: #04AA6D;
+  color: white;
+}
+/* Links on mouse-over */
+.nav-link:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .nav-link {float: left;}
+  div.content {margin-left: 0;}
+}
+@media screen and (max-width: 400px) {
+  .nav-link {
+    text-align: center;
+    float: none;
+  }
+}
+/*layout*/
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "Sidebar Header Header"
+    "Sidebar profile profile"
+    "Sidebar profile profile";
+  grid-template-columns: 0.75fr 2fr 1fr;
+  grid-template-rows: auto 50px minmax(0, 1fr);
+
+}
+.input{
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 20px;
+}
+.form{
+  width: 400px;
+  border-style: none;
+  border: none;
+  cursor: auto;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+
+}
+
+.form:focus{
+  border: none;
+  outline: none;
+}
+form::selection{
+  border: none;
+}
+.cards{
+  border-radius: 20%
+}
+.buttonrighttop{
+  margin-left: 10px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: none;
+  border-style: none;
+  border: none;
+}
+.namerighttop{
+  margin-left: 900px;
+  font-size: x-small;
+  font-weight: lighter;
+  font-style: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn{
+  background-color: blue;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.searchbtn{
+  background-color: white;
+  border-top-left-radius: 5px ;
+  border-bottom-left-radius: 5px;
+  border-style: none;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.Sidebar {
+  grid-area: sidebar;
+}
+.Header {
+  grid-area: Header;
+  width: auto;
+}
+.content {
+  grid-area: content;
+  margin:0px;
+}
+.profile{
+  grid-area: profile;
+  
+}
+.dashboard{
+    display: grid;
+    grid-template-areas:
+      "Sidebar Header Header"
+      "Sidebar content content"
+      "Sidebar content content";
+    grid-template-columns: 0.75fr 2fr 1fr;
+    grid-template-rows: auto 50px minmax(0, 1fr);
+  
+}
+/*
+card*/
+.card-img{
+  justify-content: start;
+  height: 150px;
+  width: 150px;}
+  .card{
+    height: 300px;
+    width: 500px;
+  border: solid black 5px;
+  }
+/*Profile*/
+.card1 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container1 {
+  padding: 2px 16px;
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img1 {
+  border-radius: 5px 5px 0 0;
+}
+.cardarrangement{
+  height: 300px;
+}
+.card-img-top{
+  height: 100px;
+  width: 100px ;
+}
+.timesheet{
+  justify-content: center; /* Horizontal centering */
+  align-items: center;
+  margin: auto;
+}
+.korem{
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+.cardarrangement{
+  margin: 20px;
+  padding-right: 20px; 
+  padding-bottom: 20px;
+}
+
